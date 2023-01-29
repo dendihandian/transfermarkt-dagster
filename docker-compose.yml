@@ -1,0 +1,15 @@
+# NOTE: refer for the compose-file compatibility at https://docs.docker.com/compose/compose-file/compose-versioning/#compatibility-matrix
+version: '3.8'
+
+networks:
+  default:
+    name: transfermarkt_dagster_network
+
+services:
+  dagster:
+    build: './docker/dagster'
+    container_name: dagster
+    ports:
+      - 3000:3000
+    volumes:
+      - ./docker/dagster/transfermarkt-pipeline/:/opt/dagster/app/
