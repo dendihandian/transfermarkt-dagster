@@ -10,6 +10,7 @@ packages = [{include = "transfermarkt_dagster"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 dagster = "^1.1.17"
+dagit = "^1.1.17"
 
 
 [build-system]
